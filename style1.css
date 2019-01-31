@@ -1,0 +1,16 @@
+body{
+	background-size:100% 710px;
+	padding-top:100px;
+}
+#nav{
+	margin-top:20px;
+	font-size:30px;
+	background:orange;
+	width:470px;
+	height:500px;
+	margin:auto;
+	border-radius:10px;
+	opacity:.8;
+
+
+}

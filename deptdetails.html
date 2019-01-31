@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet2.css">
+</head>
+<body>
+	<div id="header">
+	<h1 style="text-align: center;">DEPARTMENT DETAILS</h1>
+	<div id ="nav">
+	<div align="Center"><br>
+		<table border="0" cellpadding="5">
+		<tr align="center">
+			<td> <a href="HOME.html" target="f3">HOME</a></td>
+			<td> <a href="deptdetails.php" target="f3">DEPT DETAILS</a></td>
+			<td> <a href="ROOM DETAILS.html" target="f3">ROOM DETAILS</a></td>
+			<td> <a href="dep.html" target="f3">dep</a></td>
+			<td> <a href="Studentdetails.html" target="f3">Studentdetails</a></td>
+			<td> <a href="add.php" target="f3">Add</a><br>
+		</tr>
+	</table>
+
+<?php
+$con=mysql_connect("localhost", "root", "") or die ('Error:' .mysql_error());
+mysql_select_db("seatarrexam", $con);
+$username=$_POST['Username'];
+$password=$_POST['Password'];
+$Query="SELECT * from login";
+$result=mysql_query($Query);
+while($row=mysql_fetch_array($result))
+{
+$user=$row['username'];
+$pass=$row['password'];
+}
+$num=mysql_num_rows($result);
+for($i=1;$i<=$num; $i++)
+{
+if($username== $user && $password==$pass)
+{
+
+?>
+		Dep name          <input type  = "text" placeholder="Enter Department" name="fnamed"><br>
+		Dep id            <input type = "text" placeholder="Enter Department id" name="fnamed"><br>
+		Dep Descrption    <input type = "text" placeholder="Enter Descrption" name="fnamed"><br>
+       <button onclick="AddData()">Add</button>
+       <button onclick="SearchData()">Search</button>
+       <button onclick="UpdateData()">Update</button>
+       <button onclick="DeleteData()">Delete</button>
+       
+ <?php
+}
+else if($password != $pass)
+{
+echo("<b>Please Enter Correct Username and Password.</b>");
+echo("<br/><br/>");
+echo("<b><a href=\"index.html\" >Back to Login page</a></b>");
+}
+}
+?>
+   </div>
+</div>
+</body>
+</html>
