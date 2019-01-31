@@ -3,7 +3,7 @@
             It is also very useful for the college where the software may generate the hall separation. 
             The hall is allocated to the students automatically based on their departments and register numbers.
 Step 1:Create A Home Page For User It Consist of UserName, Password, Re-Enter Password,male and female and click on the register page it will automatically register in the database 
-       in  HTML PAGES And CSS PAGES
+       in  HTML PAGES And CSS PAGES <br>
 Step 2:  
       Create a Department Details Which consist of Dep Name, Dep Id, Dep Description And Perform Operation Which Consist of Add,Search,Update,Delete
       in Html PAGES and CSS PAGES 
